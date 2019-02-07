@@ -196,9 +196,9 @@ Follow the [Real-time fraud detection](stream-analytics-real-time-fraud-detectio
 ## Error handling and retries
 In the event of a failure while sending events to Azure Functions, Stream Analytics retries to successfully complete the operation. However, there are some failures for which retries are not attempted and they are as follows:
 
- 1. HttpRequestExceptions
+ 1. Any exception of the type [HttpRequestExceptions](https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httprequestexception?view=netframework-4.7.2).
  2. Request Entity Too Large (Http error code 413)
- 3. ApplicationExceptions
+ 3. Exceptions of type [ApplicationExceptions](https://docs.microsoft.com/en-us/dotnet/api/system.applicationexception?view=netframework-4.7.2).
 
 ## Known issues
 
